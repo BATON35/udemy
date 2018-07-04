@@ -13,6 +13,7 @@
 <body>
 <form action="processFormVer2" method="post">
     <input type="text" name="studentName" placeholder="What's your name?"><br>
+    <input type="submit" value="send">
 </form>
 </body>
 </html>

@@ -4,7 +4,6 @@ import lombok.Data;
 
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
-import java.util.List;
 
 @Data
 public class Student {
@@ -14,14 +13,17 @@ public class Student {
     private String surname;
     private String country;
     private LinkedHashMap<String, String> countries;
+    private String[] system;
+    private String[] systems;
 
     public Student() {
         name = "no data";
         surname = "no data";
         country = "no data";
         sex = Sex.NON;
-        countries =  fillCountries();
+        countries = fillCountries();
         sexes = fillSexes();
+        systems = new String[]{"Windows", "Mac", "Linux"};
     }
 
     private LinkedList<Sex> fillSexes() {

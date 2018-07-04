@@ -17,18 +17,24 @@
     First name;
     <form:input path="name"/>
     <br><br>
+
     Surname name;
     <form:input path="surname"/>
     <br><br>
+
     Country:
     <form:select path="country">
         <form:options items="${student.countries}"/>
     </form:select>
     <br><br>
-    Sex:
-    <br>
-    Men<from:radiobuttons path="sex" items="${student.sexes}"/>
+
+    Sex:    <from:radiobuttons path="sex" items="${student.sexes}"/>
     <%--Women<from:radiobutton path="sex" value="Women"/>--%>
+    <br><br>
+
+    Operating systems:
+    <form:checkboxes path="system" items="${student.systems}"/>
+    <br>
     <input type="submit" value="Send">
 </form:form>
 </body>
