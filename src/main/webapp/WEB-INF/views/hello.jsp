@@ -14,6 +14,6 @@
 <body>
 <h2><a href="form"> to form</a></h2>
 <h2><a href="student/showForm"> to student/showFor</a></h2>
-
+<h2><a href="customer/showForm"> to customer/showFor</a></h2>
 </body>
 </html>
