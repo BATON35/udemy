@@ -19,6 +19,8 @@ Surname: ${customer.lastName}
 You toke: ${customer.freePasses} free passes
 <br>
 Postal code: ${customer.postalCode}
+<br>
+Course code: ${customer.courseCode}
 
 </body>
 </html>
