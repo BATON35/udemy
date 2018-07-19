@@ -18,7 +18,7 @@ public class QueryStudentDemo {
         Session session = factory.getCurrentSession();
         try {
             session.beginTransaction();
-            List<Student> students = session.createQuery("from Student s where s.firstName = 'Paul'", Student.class).getResultList();
+            List<Student> students = session.createQuery("from Student s where s.firstName = 'Paul' and s.id =29" , Student.class).getResultList();
             session.getTransaction().commit();
             for (Student student : students) {
                 System.out.println(student);
