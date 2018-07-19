@@ -3,11 +3,9 @@ package com.konrad.hibernate.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.boot.autoconfigure.web.ResourceProperties;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Data
@@ -17,6 +15,7 @@ import javax.persistence.Table;
 @Table(name = "student")
 public class Student {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
     @Column(name = "first_name")
