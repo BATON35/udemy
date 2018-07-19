@@ -6,10 +6,11 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
-public class QueryStudentDemo {
+public class DeleteStudentDemo {
     public static void main(String[] args) {
-
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class)
@@ -17,17 +18,14 @@ public class QueryStudentDemo {
 
         Session session = factory.getCurrentSession();
         try {
-            String  sql = "from Student s where s.firstName = 'Paul' and s.id =29";
-            String  sqlKonrad = "from Student s where s.firstName = 'Konrad'";
-            String sqlEndedBy = "from Student s where s.email like '%.com'";
             session.beginTransaction();
-            List<Student> students = session.createQuery( sqlEndedBy, Student.class).getResultList();
-             session.getTransaction().commit();
-            for (Student student : students) {
-                System.out.println(student);
-            }
+           // Student student = session.get(Student.class,  5);
+         //   session.delete(student);
+            session.createQuery("delete from Student where id < 11").executeUpdate();
+            session.getTransaction().commit();
         } finally {
             factory.close();
         }
     }
 }
+

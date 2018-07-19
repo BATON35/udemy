@@ -16,7 +16,7 @@ public class CreateStudentsDemo {
         try {
             Student student0 = new Student("Paul", "Wall", "adsfasdfr@pl");
             Student student1 = new Student("Michel", "Soil", "adsfasdfe@pl");
-            Student student2 = new Student("Angelina", "Blow", "adsfasdfw@pl");
+            Student student2 = new Student("Konrad", "Blow", "adsfasdfw@pl.com");
             session.beginTransaction();
             session.save(student0);
             session.save(student1);
